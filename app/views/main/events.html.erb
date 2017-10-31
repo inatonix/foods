@@ -1,0 +1,12 @@
+<body>
+  <h1>Events</h1>
+  <% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.date %></td>
+    <br><br>
+  </tr>
+<% end %>
+
+<%= paginate @events %>
+</body>
