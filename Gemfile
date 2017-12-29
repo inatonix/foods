@@ -32,6 +32,8 @@ gem 'kaminari'
 gem 'faker'
 gem 'forgery'
 gem 'bcrypt',         '3.1.11'
+gem 'rmagick', require: 'RMagick'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

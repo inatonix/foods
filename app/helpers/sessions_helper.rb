@@ -13,6 +13,7 @@ module SessionsHelper
   end
 
   def log_out
+    logger.debug('ログアウトしました')
     session.delete(:user_id)
     @current_user = nil
   end

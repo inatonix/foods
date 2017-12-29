@@ -4,6 +4,7 @@ class MainController < ApplicationController
   end
 
   def about
+    logger.debug(session[:user_id])
   end
 
   def events
@@ -29,6 +30,6 @@ class MainController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:name,:date,:available)
+      params.require(:event).permit(:name, :date, :image, :available)
     end
 end

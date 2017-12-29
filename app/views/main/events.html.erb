@@ -6,23 +6,23 @@
 <body>
   <h1>Events</h1>
   <h2>New</h2>
-  <div class="container">
+  <div class="box">
     <% @new.each do |event| %>
     <div class="item">
-      <%= image_tag 'event.png' %>
       <%= event.name %>
       <%= event.date %>
+      <%= image_tag event.image %>
     </div>
   <% end %>
   </div>
 
   <h2>Previous</h2>
-  <div class="container">
+  <div class="box">
     <% @previous.first(10).each do |event| %>
     <div class="item">
-      <%= image_tag 'event.png' %>
       <%= event.name %>
       <%= event.date %>
+      <%= image_tag event.image %>
     </div>
   <% end %>
   </div>
