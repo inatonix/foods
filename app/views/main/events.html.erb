@@ -1,12 +1,31 @@
+<head>
+  <%= stylesheet_link_tag   'my_styles/events', media: 'all',
+                               'data-turbolinks-track': 'reload' %>
+</head>
+
 <body>
   <h1>Events</h1>
-  <% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.date %></td>
-    <br><br>
-  </tr>
-<% end %>
+  <h2>New</h2>
+  <div class="container">
+    <% @new.each do |event| %>
+    <div class="item">
+      <%= image_tag 'event.png' %>
+      <%= event.name %>
+      <%= event.date %>
+    </div>
+  <% end %>
+  </div>
 
-<%= paginate @events %>
+  <h2>Previous</h2>
+  <div class="container">
+    <% @previous.first(10).each do |event| %>
+    <div class="item">
+      <%= image_tag 'event.png' %>
+      <%= event.name %>
+      <%= event.date %>
+    </div>
+  <% end %>
+  </div>
+
+
 </body>

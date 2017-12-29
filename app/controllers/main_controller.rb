@@ -7,6 +7,7 @@ class MainController < ApplicationController
   end
 
   def events
-    @events = Event.page(params[:page])
+    @new = Event.where(available:true)
+    @previous = Event.where(available:false)
   end
 end

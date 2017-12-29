@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1em;
+  border: 5px solid #999;
+}
