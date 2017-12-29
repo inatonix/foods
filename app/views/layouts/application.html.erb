@@ -20,7 +20,9 @@
             <li><%= link_to "Home",   'home' %></li>
             <li><%= link_to "About us",   'about' %></li>
             <li><%= link_to "Events", 'events' %></li>
-            <li><%= link_to "Reserve", 'reserve' %></li>
+            <% if logged_in? %>
+              <li><%= link_to "Admin", 'admin' %></li>
+            <% end %>
           </ul>
         </nav>
       </div>
