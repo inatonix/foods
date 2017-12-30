@@ -1,0 +1,14 @@
+/* line 1, /Users/shuya_inada/workspace/Projects/foods/app/assets/stylesheets/my_styles/events.scss */
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* line 7, /Users/shuya_inada/workspace/Projects/foods/app/assets/stylesheets/my_styles/events.scss */
+.item {
+  font-family: 'Mplus 1p';
+  width: 275px;
+  height: 200px;
+  margin-bottom: 1em;
+}
