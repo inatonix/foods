@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
+    <title>食の交流会</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                'data-turbolinks-track': 'reload' %>
@@ -11,9 +11,53 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+
   </head>
   <body>
-    <header class="navbar navbar-fixed-top">
+    <header id="luxbar" class="luxbar-fixed">
+        <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
+        <div class="luxbar-menu luxbar-menu-right luxbar-menu-material-amber">
+            <ul class="luxbar-navigation">
+                <li class="luxbar-header">
+                    <div class="word"><a href="#" class="luxbar-brand">食の交流会</a></div>
+                    <label class="luxbar-hamburger luxbar-hamburger-doublespin"
+                    id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+                </li>
+                <li class="luxbar-item"><%= link_to "Home",   'home' %></li>
+                <li class="luxbar-item"><%= link_to "About us",   'about' %></li>
+                <li class="luxbar-item"><%= link_to "Events", 'events' %></li>
+                <% if logged_in? %>
+                  <li class="luxbar-item"><%= link_to "Admin", 'admin' %></li>
+                  <li class="luxbar-item"><%= link_to "Log out", logout_path, :method => :delete %></li>
+                <% end %>
+            </ul>
+        </div>
+    </header>
+
+    <!-- <header id="luxbar" class="luxbar-fixed">
+        <input type="checkbox" id="luxbar-checkbox"/>
+        <div class="luxbar-menu luxbar-menu-right luxbar-menu-material-cyan">
+            <ul class="luxbar-navigation">
+                <li class="luxbar-header">
+                    <a href="#" class="luxbar-brand">ロゴ</a>
+                    <label class="luxbar-hamburger luxbar-hamburger-doublespin"
+                    id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+                </li>
+                <li><%= link_to "Home",   'home' %></li>
+                <li><%= link_to "About us",   'about' %></li>
+                <li><%= link_to "Events", 'events' %></li>
+                <li><%= link_to "Log in", login_path %></li>
+                <% if logged_in? %>
+                  <li><%= link_to "Admin", 'admin' %></li>
+                  <li><%= link_to "Log out", logout_path, :method => :delete %></li>
+                <% end %>
+            </ul>
+        </div>
+    </header> -->
+
+
+    <!-- <header class="navbar navbar-fixed-top">
       <div class="container">
         <nav>
           <ul class="nav navbar-nav navbar-right">
@@ -28,8 +72,8 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <div class="container">
+    </header> -->
+    <div class="content">
       <%= yield %>
     </div>
   </body>

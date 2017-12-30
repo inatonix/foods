@@ -3,4 +3,5 @@ class EventController < ApplicationController
     @events = Event.all
   end
 
+
 end

@@ -1,19 +1,19 @@
-body {
-    background-image: image-url("title5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-  //  animation: fadeIn 2s ease 0s 1 normal;
-    -webkit-animation: fadeIn 2s ease 0s 1 normal;
-    //-webkit-transition: background-color 1s linear;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
+// body {
+//     background-image: image-url("title5.jpg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//
+//   //  animation: fadeIn 2s ease 0s 1 normal;
+//     -webkit-animation: fadeIn 2s ease 0s 1 normal;
+//     //-webkit-transition: background-color 1s linear;
+// }
+//
+// @keyframes fadeIn {
+//     0% {opacity: 0}
+//     100% {opacity: 1}
+// }
+// 
+// @-webkit-keyframes fadeIn {
+//     0% {opacity: 0}
+//     100% {opacity: 1}
+// }

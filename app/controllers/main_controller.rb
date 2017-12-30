@@ -14,6 +14,14 @@ class MainController < ApplicationController
 
   def create_event
     @event = Event.new(event_params)
+
+    if event_params[:image] != nil
+      img = MiniMagick::Image.read(event_params[:image])
+      img.resize "150x225"
+      img.write "public/uploads/hoge.jpg"
+    end
+
+    logger.debug('クリエイト！！！！')
     if @event.save
 
     else
