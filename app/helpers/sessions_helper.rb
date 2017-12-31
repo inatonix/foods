@@ -12,6 +12,10 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def admin?
+    
+  end
+
   def log_out
     logger.debug('ログアウトしました')
     session.delete(:user_id)

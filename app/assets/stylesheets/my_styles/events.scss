@@ -4,9 +4,19 @@
   flex-wrap: wrap;
 }
 
-.item {
-  font-family: 'Mplus 1p';
-  width: 275px;
+.scroll_box {
+  width: 300px;
   height: 200px;
-  margin-bottom: 1em;
+  overflow: scroll;
 }
+
+.item {
+  display: inline-block;
+}
+
+// .item {
+//   font-family: 'Mplus 1p';
+//   width: 275px;
+//   height: 200px;
+//   margin-bottom: 1em;
+// }
