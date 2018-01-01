@@ -20,8 +20,8 @@
         <div class="scroll_box">
           <% @previous.first(10).each do |event| %>
             <div class="item">
-              <%= image_tag event.image, :size => '225x150' %>
-              <%= event.name %>
+              <%= image_tag event.image, :size => '225x150' %><br>
+              <%= event.name %><br>
               <%= event.date.strftime('%Y/%m/%d') %>
             </div>
           <% end %>
