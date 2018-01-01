@@ -5,19 +5,13 @@
 }
 
 .scroll_box {
-  width: 270px;
-  height: 190px;
-  overflow: auto;
+   width: 300px;
+   overflow: scroll;
+   display: flex;
 }
 
 .item {
-  border: red 1px;
-//display: inline-block;
+  border: 4px double #000;
+   margin: 0.2em 0;
+   padding: 0.4em;
 }
-
-// .item {
-//   font-family: 'Mplus 1p';
-//   width: 275px;
-//   height: 200px;
-//   margin-bottom: 1em;
-// }
