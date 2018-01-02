@@ -35,44 +35,7 @@
         </div>
     </header>
 
-    <!-- <header id="luxbar" class="luxbar-fixed">
-        <input type="checkbox" id="luxbar-checkbox"/>
-        <div class="luxbar-menu luxbar-menu-right luxbar-menu-material-cyan">
-            <ul class="luxbar-navigation">
-                <li class="luxbar-header">
-                    <a href="#" class="luxbar-brand">ロゴ</a>
-                    <label class="luxbar-hamburger luxbar-hamburger-doublespin"
-                    id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
-                </li>
-                <li><%= link_to "Home",   'home' %></li>
-                <li><%= link_to "About us",   'about' %></li>
-                <li><%= link_to "Events", 'events' %></li>
-                <li><%= link_to "Log in", login_path %></li>
-                <% if logged_in? %>
-                  <li><%= link_to "Admin", 'admin' %></li>
-                  <li><%= link_to "Log out", logout_path, :method => :delete %></li>
-                <% end %>
-            </ul>
-        </div>
-    </header> -->
 
-
-    <!-- <header class="navbar navbar-fixed-top">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   'home' %></li>
-            <li><%= link_to "About us",   'about' %></li>
-            <li><%= link_to "Events", 'events' %></li>
-            <li><%= link_to "Log in", login_path %></li>
-            <% if logged_in? %>
-              <li><%= link_to "Admin", 'admin' %></li>
-              <li><%= link_to "Log out", logout_path, :method => :delete %></li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header> -->
     <div class="content">
       <%= yield %>
     </div>

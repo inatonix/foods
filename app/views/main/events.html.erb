@@ -8,13 +8,16 @@
     <div class="back_white">
       <h1>Events</h1>
       <h2>New</h2>
-        <% @new.each do |event| %>
-        <div class="item">
-          <%= image_tag event.image, :size => '250x175' %><br>
-          <%= event.name %><br>
-          <%= event.date.strftime('%Y/%m/%d') %>
-        </div>
-      <% end %>
+      <div class="scroll_box">
+          <% @new.each do |event| %>
+          <div class="new_item">
+            <%= image_tag event.image, :size => '250x175' %><br>
+            <%= event.name %><br>
+            <%= event.date.strftime('%Y/%m/%d') %>
+          </div>
+        <% end %>
+      </div>
+
 
       <h2>Previous</h2>
         <div class="scroll_box">

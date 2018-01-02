@@ -12,9 +12,9 @@ module SessionsHelper
     !current_user.nil?
   end
 
-  def admin?
-    
-  end
+  # def admin?
+  #   @current_user.email == "shoku.koryu@gmail.com"
+  # end
 
   def log_out
     logger.debug('ログアウトしました')

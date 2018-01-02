@@ -8,8 +8,8 @@ class MainController < ApplicationController
   end
 
   def events
-    @new = Event.where(available:true)
-    @previous = Event.where(available:false)
+    @new = Event.where('created_at > ?', 1.day.ago)
+    @previous = Event.where('created_at <= ?', 1.day.ago)
   end
 
   def create_event
@@ -33,7 +33,6 @@ class MainController < ApplicationController
 
   def admin
     @event = Event.new
-    @event.available = true
   end
 
   private
