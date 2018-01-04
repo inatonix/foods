@@ -1,19 +1,22 @@
 <div class="row">
+  <% current_user %>
+  <% if @current_user.admin? %>
 
-  <h1>Create Event</h1>
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@event) do |f| %>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %><br>
+    <h1>Create Event</h1>
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@event) do |f| %>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %><br>
 
-      <%= f.label :date %><br>
-      <%= f.date_field :date %><br>
+        <%= f.label :date %><br>
+        <%= f.date_field :date %><br>
 
-      <%= f.label :image %><br>
-      <%= f.file_field :image, :accept => "image/jpeg"%><br>
+        <%= f.label :image %><br>
+        <%= f.file_field :image, :accept => "image/jpeg"%><br>
 
 
-      <%= f.submit "Create Event", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+        <%= f.submit "Create Event", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  <% end %>
 </div>

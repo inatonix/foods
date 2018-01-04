@@ -8,8 +8,8 @@ class MainController < ApplicationController
   end
 
   def events
-    @new = Event.where('created_at > ?', 1.day.ago)
-    @previous = Event.where('created_at <= ?', 1.day.ago)
+    @new = Event.where('date > ?', 1.day.ago)
+    @previous = Event.where('date <= ?', 1.day.ago)
   end
 
   def create_event
