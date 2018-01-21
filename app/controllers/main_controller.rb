@@ -21,7 +21,7 @@ class MainController < ApplicationController
       img.write "public/uploads/hoge.jpg"
     end
 
-    logger.debug('クリエイト！！！！')
+    logger.debug('クリエイト！！！')
     if @event.save
 
     else
